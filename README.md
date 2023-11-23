@@ -21,9 +21,9 @@ To use this module, you can include it in your Terraform configuration. Here's a
 
 ```hcl
 module "acm" {
-  source      = "git::https://github.com/cypik/terraform-aws-acm.git?ref=v1.0.0"
-  name        = "certificate"
-  environment = "test"
+  source                    = "git::https://github.com/cypik/terraform-aws-acm.git?ref=v1.0.0"
+  name                      = "certificate"
+  environment               = "test"
   domain_name               = "cypik.com"
   subject_alternative_names = ["*.${local.domain}", "www.${local.domain}"]
 }
@@ -32,9 +32,9 @@ module "acm" {
 ## Example: generate-certificate-email
 ```hcl
 module "acm" {
-  source      = "git::https://github.com/cypik/terraform-aws-acm.git?ref=v1.0.0"
-  name        = "certificate"
-  environment = "test"
+  source                    = "git::https://github.com/cypik/terraform-aws-acm.git?ref=v1.0.0"
+  name                      = "certificate"
+  environment               = "test"
   validate_certificate      = false
   domain_name               = "cypik.com"
   subject_alternative_names = ["www.cypik.com"]
@@ -45,9 +45,9 @@ module "acm" {
 ## Example: import-certificate
 ```hcl
 module "acm" {
-  source      = "git::https://github.com/cypik/terraform-aws-acm.git?ref=v1.0.0"
-  name        = "certificate"
-  environment = "test"
+  source             = "git::https://github.com/cypik/terraform-aws-acm.git?ref=v1.0.0"
+  name               = "certificate"
+  environment        = "test"
   import_certificate = true
   private_key        = "./../../../cypik-private-key.pem"
   certificate_body   = "./../../../cypik-cert.pem"
@@ -72,7 +72,7 @@ module "acm" {
 - Other relevant security group outputs (modify as needed).
 
 ## Example
-For detailed examples on how to use this module, please refer to the 'example' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[example](https://github.com/cypik/terraform-aws-acm/blob/master/example)' directory within this repository.
 
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
