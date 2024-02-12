@@ -61,7 +61,7 @@ module "acm" {
 ```
 
 ## Example
-For detailed examples on how to use this module, please refer to the '[example](https://github.com/cypik/terraform-aws-acm/blob/master/example)' directory within this repository.
+For detailed examples on how to use this module, please refer to the [example](https://github.com/cypik/terraform-aws-acm/blob/master/example) directory within this repository.
 
 ## Author
 Your Name Replace **MIT** and **Cypik** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
