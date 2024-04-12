@@ -117,7 +117,7 @@ Your Name Replace **MIT** and **Cypik** with the appropriate license and your in
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_private_key"></a> [private\_key](#input\_private\_key) | Path of private key. | `string` | `""` | no |
 | <a name="input_private_zone"></a> [private\_zone](#input\_private\_zone) | Used with name field to get a private Hosted Zone. | `bool` | `false` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/cypik/terraform-aws-acm.git"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/cypik/terraform-aws-acm"` | no |
 | <a name="input_subject_alternative_names"></a> [subject\_alternative\_names](#input\_subject\_alternative\_names) | Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list ([]) or use the terraform taint command to trigger recreation. | `list(any)` | `[]` | no |
 | <a name="input_ttl"></a> [ttl](#input\_ttl) | Time to live. | `number` | `600` | no |
 | <a name="input_validate_certificate"></a> [validate\_certificate](#input\_validate\_certificate) | Set to false to prevent the validation of a acm certificate. | `bool` | `false` | no |
