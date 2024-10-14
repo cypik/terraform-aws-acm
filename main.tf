@@ -1,6 +1,6 @@
 module "labels" {
   source      = "cypik/labels/aws"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
@@ -13,6 +13,7 @@ resource "aws_acm_certificate" "import-cert" {
   private_key       = file(var.private_key)
   certificate_body  = file(var.certificate_body)
   certificate_chain = file(var.certificate_chain)
+  domain_name       = var.domain_name
   tags              = module.labels.tags
 
   dynamic "validation_option" {
@@ -27,13 +28,23 @@ resource "aws_acm_certificate" "import-cert" {
   lifecycle {
     create_before_destroy = true
   }
+  subject_alternative_names = var.subject_alternative_names
+
+  # Optional parameters
+  validation_method = var.validation_method
+  key_algorithm     = "RSA_2048"
 }
 
 ##----------------------------------------------------------------------------------
 ## The ACM certificate resource allows requesting and management of certificates from the Amazon Certificate Manager.
 ##----------------------------------------------------------------------------------
 resource "aws_acm_certificate" "cert" {
-  count = var.enable && var.enable_aws_certificate ? 1 : 0
+  count = var.enable && var.import_certificate ? 1 : 0
+
+  # Provide the required arguments for importing
+  private_key       = file(var.private_key)
+  certificate_body  = file(var.certificate_body)
+  certificate_chain = file(var.certificate_chain)
 
   domain_name               = var.domain_name
   validation_method         = var.validation_method

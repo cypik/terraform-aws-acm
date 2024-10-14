@@ -24,7 +24,7 @@ To use this module, you can include it in your Terraform configuration. Here's a
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   ="1.0.1"
+  version                   ="1.0.2"
   name                      = "certificate"
   environment               = "test"
   domain_name               = "cypik.com"
@@ -36,7 +36,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   = "1.0.1"
+  version                   = "1.0.2"
   name                      = "certificate"
   environment               = "test"
   validate_certificate      = false
@@ -50,7 +50,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source             = "cypik/acm/aws"
-  version            = "1.0.1"
+  version            = "1.0.2"
   name               = "certificate"
   environment        = "test"
   import_certificate = true
@@ -73,20 +73,20 @@ Your Name Replace **MIT** and **Cypik** with the appropriate license and your in
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.32.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=5.67.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.32.1 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >=5.67.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.1 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.2 |
 
 ## Resources
 
@@ -108,7 +108,6 @@ Your Name Replace **MIT** and **Cypik** with the appropriate license and your in
 | <a name="input_certificate_chain"></a> [certificate\_chain](#input\_certificate\_chain) | Path of certificate chain. | `string` | `""` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | A domain name for which the certificate should be issued. | `string` | `""` | no |
 | <a name="input_enable"></a> [enable](#input\_enable) | Whether or not to enable the entire module or not. | `bool` | `true` | no |
-| <a name="input_enable_aws_certificate"></a> [enable\_aws\_certificate](#input\_enable\_aws\_certificate) | Set to false to prevent the creation of a acm certificate. | `bool` | `true` | no |
 | <a name="input_enable_dns_validation"></a> [enable\_dns\_validation](#input\_enable\_dns\_validation) | Set to prevent validation of DNS. | `bool` | `false` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_import_certificate"></a> [import\_certificate](#input\_import\_certificate) | Set to true or false to decide the creation and import of a acm certificate. | `bool` | `false` | no |
