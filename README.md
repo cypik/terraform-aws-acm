@@ -24,7 +24,7 @@ To use this module, you can include it in your Terraform configuration. Here's a
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   ="1.0.1"
+  version                   ="1.0.2"
   name                      = "certificate"
   environment               = "test"
   domain_name               = "cypik.com"
@@ -36,7 +36,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   = "1.0.1"
+  version                   = "1.0.2"
   name                      = "certificate"
   environment               = "test"
   validate_certificate      = false
@@ -50,7 +50,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source             = "cypik/acm/aws"
-  version            = "1.0.1"
+  version            = "1.0.2"
   name               = "certificate"
   environment        = "test"
   import_certificate = true
