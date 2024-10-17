@@ -24,7 +24,7 @@ To use this module, you can include it in your Terraform configuration. Here's a
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   ="1.0.1"
+  version                   ="1.0.2"
   name                      = "certificate"
   environment               = "test"
   domain_name               = "cypik.com"
@@ -36,7 +36,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   = "1.0.1"
+  version                   = "1.0.2"
   name                      = "certificate"
   environment               = "test"
   validate_certificate      = false
@@ -50,7 +50,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source             = "cypik/acm/aws"
-  version            = "1.0.1"
+  version            = "1.0.2"
   name               = "certificate"
   environment        = "test"
   import_certificate = true
@@ -73,20 +73,20 @@ Your Name Replace **MIT** and **Cypik** with the appropriate license and your in
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.32.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=5.67.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.32.1 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >=5.67.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.1 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.2 |
 
 ## Resources
 
@@ -113,7 +113,7 @@ Your Name Replace **MIT** and **Cypik** with the appropriate license and your in
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_import_certificate"></a> [import\_certificate](#input\_import\_certificate) | Set to true or false to decide the creation and import of a acm certificate. | `bool` | `false` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'cypik' | `string` | `"cypik"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'info@cypik.com' | `string` | `"info@cypik.com"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_private_key"></a> [private\_key](#input\_private\_key) | Path of private key. | `string` | `""` | no |
 | <a name="input_private_zone"></a> [private\_zone](#input\_private\_zone) | Used with name field to get a private Hosted Zone. | `bool` | `false` | no |

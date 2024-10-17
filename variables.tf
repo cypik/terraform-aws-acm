@@ -26,8 +26,8 @@ variable "label_order" {
 
 variable "managedby" {
   type        = string
-  default     = "cypik"
-  description = "ManagedBy, eg 'cypik'"
+  default     = "info@cypik.com"
+  description = "ManagedBy, eg 'info@cypik.com'"
 }
 
 # Module      : ACM CERTIFICATE
