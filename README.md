@@ -24,7 +24,7 @@ To use this module, you can include it in your Terraform configuration. Here's a
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   ="1.0.2"
+  version                   = "1.0.3"
   name                      = "certificate"
   environment               = "test"
   domain_name               = "cypik.com"
@@ -36,7 +36,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source                    = "cypik/acm/aws"
-  version                   = "1.0.2"
+  version                   = "1.0.3"
   name                      = "certificate"
   environment               = "test"
   validate_certificate      = false
@@ -50,7 +50,7 @@ module "acm" {
 ```hcl
 module "acm" {
   source             = "cypik/acm/aws"
-  version            = "1.0.2"
+  version            = "1.0.3"
   name               = "certificate"
   environment        = "test"
   import_certificate = true
@@ -73,20 +73,20 @@ Your Name Replace **MIT** and **Cypik** with the appropriate license and your in
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=5.67.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.15.8 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.58.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >=5.67.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.58.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.2 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.4 |
 
 ## Resources
 
